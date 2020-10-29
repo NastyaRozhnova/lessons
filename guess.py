@@ -25,7 +25,3 @@ while counter != attempts:
         break 
 else:
     print(f'Твои попытки закончились, я загадал число {guess_number}')
-
-check_number()
-
-
