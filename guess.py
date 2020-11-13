@@ -32,3 +32,5 @@ while play_again == 'да':
         print(f'Твои попытки закончились, я загадал число {guess_number}')
 
     play_again = check_input(input('Сыграем ещё?\n'), ['да', 'нет'])
+
+# СКОМПИЛИРОВАТЬ
