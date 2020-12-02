@@ -1,0 +1,1 @@
+C:\Users\admin\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\PySide2\designer.exe
