@@ -1,4 +1,8 @@
+Команда для установки pyside2:
+python -m pip install pyside2
+
 Расположение Designer:
 C:\Users\admin\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\PySide2\designer.exe
+
 Команда для конвертации .ui в .py:
 pyside2-uic file.ui > design_file.py 
