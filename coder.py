@@ -22,7 +22,7 @@ class Coder:
             translated += self.encode_symbol(symb, operation_type)
         return translated
 
-class MainWindow(QMainWindow):
+class MainWindow(QMainWindow, Coder):
     def __init__(self):
 		# вызовем метод родительского класса
         super(MainWindow, self).__init__()
@@ -33,11 +33,28 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
 
         # Соединим сигналы со слотами
-        # self.ui.pushButton.clicked.connect(self.pushed_button)
+        self.ui.encode.clicked.connect(self.pushed_button)
+        self.ui.decode.clicked.connect(self.pushed_button)
+        self.ui.indent.valueChanged.connect(self.set_indent)
+
+
+    def set_indent(self):
+        print(self.ui.indent.value())
+
 
     # функция при нажатии на кнопку
     def pushed_button(self):
-        pass
+        button = self.sender()
+        object_name = button.objectName()
+
+        source = self.ui.source_text.toPlainText()
+        self.ui.translation.setText(self.translation(source, object_name)) 
+       
+
+        
+
+
+
 
 
 if __name__ == "__main__":

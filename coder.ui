@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>364</width>
-    <height>530</height>
+    <height>527</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -38,7 +38,7 @@ color: rgb(255, 255, 255);</string>
      <string>Текст</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit">
+   <widget class="QTextEdit" name="source_text">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -48,7 +48,7 @@ color: rgb(255, 255, 255);</string>
      </rect>
     </property>
    </widget>
-   <widget class="QDial" name="dial">
+   <widget class="QDial" name="indent">
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -58,7 +58,7 @@ color: rgb(255, 255, 255);</string>
      </rect>
     </property>
    </widget>
-   <widget class="QLCDNumber" name="lcdNumber">
+   <widget class="QLCDNumber" name="indent_screen">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -85,7 +85,7 @@ color: rgb(255, 255, 255);</string>
      <string>Перевод</string>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="textBrowser">
+   <widget class="QTextBrowser" name="translation">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -95,7 +95,7 @@ color: rgb(255, 255, 255);</string>
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="encode">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -114,17 +114,20 @@ background-color: rgb(255, 255, 255);</string>
      <string>Кодировать</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="decode">
     <property name="geometry">
      <rect>
       <x>190</x>
       <y>440</y>
-      <width>131</width>
+      <width>141</width>
       <height>61</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;Comic Sans MS&quot;;</string>
+     <string notr="true">font: 12pt &quot;Comic Sans MS&quot;;
+border-radius: 20px;
+border: 1px solid; 
+background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Декодировать</string>
