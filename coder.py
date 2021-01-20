@@ -8,7 +8,7 @@ from PySide2 import QtCore
 from design_coder import Ui_MainWindow
 
 class Coder:
-    def encode_symbol(self, symbol, operation_type, indent=3):
+    def encode_symbol(self, symbol, operation_type, indent):
         if operation_type == 'encode': 
             symbol_number = ord(symbol) +indent
         elif operation_type == 'decode': 
@@ -16,10 +16,10 @@ class Coder:
         new_symbol = chr(symbol_number)
         return new_symbol
 
-    def translation(self, text, operation_type):
+    def translation(self, text, operation_type, indent):
         translated = ''
         for symb in text:
-            translated += self.encode_symbol(symb, operation_type)
+            translated += self.encode_symbol(symb, operation_type, indent)
         return translated
 
 class MainWindow(QMainWindow, Coder):
@@ -37,9 +37,16 @@ class MainWindow(QMainWindow, Coder):
         self.ui.decode.clicked.connect(self.pushed_button)
         self.ui.indent.valueChanged.connect(self.set_indent)
 
+        # Отступ по умолчанию
+        self.indent = 3
+        self.ui.indent_screen.display(self.indent)
+
+
 
     def set_indent(self):
-        print(self.ui.indent.value())
+        self.indent = self.ui.indent.value()
+        self.ui.indent_screen.display(self.indent)
+
 
 
     # функция при нажатии на кнопку
@@ -48,7 +55,7 @@ class MainWindow(QMainWindow, Coder):
         object_name = button.objectName()
 
         source = self.ui.source_text.toPlainText()
-        self.ui.translation.setText(self.translation(source, object_name)) 
+        self.ui.translation.setText(self.translation(source, object_name, self.indent)) 
        
 
         

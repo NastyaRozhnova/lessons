@@ -7,17 +7,31 @@
     <x>0</x>
     <y>0</y>
     <width>364</width>
-    <height>527</height>
+    <height>497</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon.ico</normaloff>icon.ico</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">QMainWindow 
+{	
+	background-color: rgb(255, 170, 127);
+}
+
+QPushButton:hover
 {
-	
-	background-color: rgb(124, 19, 21);
+	margin-top: 10px;
+	background-color: rgb(249, 255, 143);
+}
+
+QPushButton
+{
+	background-color: rgb(255, 255, 127);
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -51,7 +65,7 @@ color: rgb(255, 255, 255);</string>
    <widget class="QDial" name="indent">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>190</x>
       <y>20</y>
       <width>50</width>
       <height>64</height>
@@ -72,7 +86,7 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>250</y>
+      <y>230</y>
       <width>131</width>
       <height>51</height>
      </rect>
@@ -89,7 +103,7 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>310</y>
+      <y>290</y>
       <width>301</width>
       <height>111</height>
      </rect>
@@ -99,7 +113,7 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>440</y>
+      <y>420</y>
       <width>131</width>
       <height>61</height>
      </rect>
@@ -118,7 +132,7 @@ background-color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>440</y>
+      <y>420</y>
       <width>141</width>
       <height>61</height>
      </rect>

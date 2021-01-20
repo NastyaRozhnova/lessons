@@ -17,11 +17,24 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(364, 527)
+        MainWindow.resize(364, 497)
+        icon = QIcon()
+        icon.addFile(u"icon.ico", QSize(), QIcon.Normal, QIcon.Off)
+        MainWindow.setWindowIcon(icon)
         MainWindow.setStyleSheet(u"QMainWindow \n"
+"{	\n"
+"	background-color: rgb(255, 170, 127);\n"
+"}\n"
+"\n"
+"QPushButton:hover\n"
 "{\n"
-"	\n"
-"	background-color: rgb(124, 19, 21);\n"
+"	margin-top: 10px;\n"
+"	background-color: rgb(249, 255, 143);\n"
+"}\n"
+"\n"
+"QPushButton\n"
+"{\n"
+"	background-color: rgb(255, 255, 127);\n"
 "}")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
@@ -35,28 +48,28 @@ class Ui_MainWindow(object):
         self.source_text.setGeometry(QRect(30, 90, 301, 111))
         self.indent = QDial(self.centralwidget)
         self.indent.setObjectName(u"indent")
-        self.indent.setGeometry(QRect(180, 20, 50, 64))
+        self.indent.setGeometry(QRect(190, 20, 50, 64))
         self.indent_screen = QLCDNumber(self.centralwidget)
         self.indent_screen.setObjectName(u"indent_screen")
         self.indent_screen.setGeometry(QRect(250, 30, 81, 41))
         self.label_2 = QLabel(self.centralwidget)
         self.label_2.setObjectName(u"label_2")
-        self.label_2.setGeometry(QRect(30, 250, 131, 51))
+        self.label_2.setGeometry(QRect(30, 230, 131, 51))
         self.label_2.setStyleSheet(u"font: 20pt \"Comic Sans MS\";\n"
 "color: rgb(255, 255, 255);")
         self.translation = QTextBrowser(self.centralwidget)
         self.translation.setObjectName(u"translation")
-        self.translation.setGeometry(QRect(30, 310, 301, 111))
+        self.translation.setGeometry(QRect(30, 290, 301, 111))
         self.encode = QPushButton(self.centralwidget)
         self.encode.setObjectName(u"encode")
-        self.encode.setGeometry(QRect(30, 440, 131, 61))
+        self.encode.setGeometry(QRect(30, 420, 131, 61))
         self.encode.setStyleSheet(u"font: 12pt \"Comic Sans MS\";\n"
 "border-radius: 20px;\n"
 "border: 1px solid; \n"
 "background-color: rgb(255, 255, 255);")
         self.decode = QPushButton(self.centralwidget)
         self.decode.setObjectName(u"decode")
-        self.decode.setGeometry(QRect(190, 440, 141, 61))
+        self.decode.setGeometry(QRect(190, 420, 141, 61))
         self.decode.setStyleSheet(u"font: 12pt \"Comic Sans MS\";\n"
 "border-radius: 20px;\n"
 "border: 1px solid; \n"
